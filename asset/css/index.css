@@ -8,7 +8,6 @@ Index style sheet
 
 @media screen and (max-width: 1440px){}
 
-    @media screen and (max-width: 600px){}
 .index_gallery{
   position:relative;
   width:100%;
@@ -76,7 +75,7 @@ Index style sheet
 }
 
 .gallary_center_title:hover{
-  color: #3da865;
+  color: #4ace7c;
   /*timer*/
   -webkit-transition: all 420ms cubic-bezier(.25,.8,.25,1);
   -moz-transition: all 420ms ease-in-out;
@@ -136,6 +135,11 @@ Index style sheet
 }
 
 
+@media screen and (max-width: 600px){
+  .index_gallery_img{
+    margin-top:-4px;
+  }
+}
 
 @media screen and (min-width: 1921px){
   .gallary_center_title{
@@ -147,6 +151,10 @@ Index style sheet
 
   .index_gallery_Contorller{
     height:140px;
+  }
+
+  .index_gallery_img{
+    margin-top:0px;
   }
 
   .gC{

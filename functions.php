@@ -20,13 +20,13 @@ function liveface_load_styles() {
   wp_enqueue_style( 'style', get_stylesheet_uri() );
 
   // Add Index css.
-  wp_enqueue_style('liveface-css-index', get_template_directory_uri() . '/asset/css/index.css', false, '1.4.9');
+  wp_enqueue_style('liveface-css-index', get_template_directory_uri() . '/asset/css/index.css', false, '1.5.2');
 
   // Add Animate css
-  wp_enqueue_style('liveface-css-animate', get_template_directory_uri() . '/asset/css/animate.css', false, '1.4.9');
+  wp_enqueue_style('liveface-css-animate', get_template_directory_uri() . '/asset/css/animate.css', false, '1.5.2');
 
   // Add Video css
-  wp_enqueue_style('liveface-css-video', get_template_directory_uri() . '/asset/css/video.css', false, '1.4.9');
+  wp_enqueue_style('liveface-css-video', get_template_directory_uri() . '/asset/css/video.css', false, '1.5.2');
 
   // Add Font-awesome css
   wp_enqueue_style('liveface-css-font-awesome', get_template_directory_uri() . '/asset/css/font-awesome.min.css', false, '1.1');
@@ -153,6 +153,26 @@ function liveface_customize_register( $wp_customize ) {
       'settings' => 'tencent_video_link'
     ));
 
+    //Profile Picture Start
+    $wp_customize->add_section('bg_profilePic', array(
+    'title' => 'Profile Picture',
+    'description' => 'Your profile picture',
+    'capability' => 'edit_theme_options'
+    ));
+
+    $wp_customize->add_setting('bg_profilePic', array(
+      'type' => 'theme_mod',
+      'default' => '#',
+      'capability' => 'edit_theme_options',
+      'sanitize_callback' => 'absint'
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, 'bg_profilePic', array(
+    'section' => 'bg_profilePic',
+    'label' => 'Make sure Image Height = Width',
+    'mime_type' => 'audio'
+    )));
+
     //Big Index Text Start
     $wp_customize->add_section('bg_bigText', array(
     'title' => 'I AM Name',
@@ -243,6 +263,45 @@ function liveface_customize_register( $wp_customize ) {
       'section' => 'other_portfolio',
       'priority' => 15,
       'settings' => 'op_dribbble'
+    ));
+
+    $wp_customize->add_setting('op_github', array(
+      'type' => 'theme_mod',
+      'default' => '#',
+      'capability' => 'edit_theme_options',
+    ));
+
+    $wp_customize->add_control('op_github', array(
+      'label' => __('Github', 'LiveFACE'),
+      'section' => 'other_portfolio',
+      'priority' => 15,
+      'settings' => 'op_github'
+    ));
+
+    $wp_customize->add_setting('op_facebook', array(
+      'type' => 'theme_mod',
+      'default' => '#',
+      'capability' => 'edit_theme_options',
+    ));
+
+    $wp_customize->add_control('op_facebook', array(
+      'label' => __('Facebook', 'LiveFACE'),
+      'section' => 'other_portfolio',
+      'priority' => 15,
+      'settings' => 'op_facebook'
+    ));
+
+    $wp_customize->add_setting('op_twitter', array(
+      'type' => 'theme_mod',
+      'default' => '#',
+      'capability' => 'edit_theme_options',
+    ));
+
+    $wp_customize->add_control('op_twitter', array(
+      'label' => __('Twitter', 'LiveFACE'),
+      'section' => 'other_portfolio',
+      'priority' => 15,
+      'settings' => 'op_twitter'
     ));
 
   }

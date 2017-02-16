@@ -8,6 +8,9 @@
     $pin = get_theme_mod('op_pinterest');
     $behance = get_theme_mod('op_behance');
     $dribbble = get_theme_mod('op_dribbble');
+    $github = get_theme_mod('op_github');
+    $facebook = get_theme_mod('op_facebook');
+    $twitter = get_theme_mod('op_twitter');
 
     //Other Portfolio Display, if user leave it blank that will not display
     if($ins != null || $ins = ''){
@@ -26,11 +29,28 @@
       echo "<a href='$dribbble' target='_blank'><i class='fa fa-dribbble' aria-hidden='true'></i></a>";
     }
 
+    if($github != null || $github = ''){
+      echo "<a href='$github' target='_blank'><i class='fa fa-github' aria-hidden='true'></i></i></a>";
+    }
+
+    if($facebook != null || $facebook = ''){
+      echo "<a href='$facebook' target='_blank'><i class='fa fa-facebook' aria-hidden='true'></i></i></a>";
+    }
+
+    if($twitter != null || $twitter = ''){
+      echo "<a href='$twitter' target='_blank'><i class='fa fa-twitter' aria-hidden='true'></i></i></a>";
+    }
+
      ?>
 
     <br>
     <br>
-    <a class='footer_info'>Design by JIANFENG WU | Powered by Wordpress</a>
+    <div class='footer_info'>
+      <a>Design by </a>
+      <a href='https://isjeff.com'>JIANFENG WU</a>
+      <a> | Powered by </a>
+      <a href='<?php echo esc_url( home_url( '/' ) ); ?>wp-admin' target='_blank'>WordPress</a>
+    </div>
 
   </div>
 </footer>

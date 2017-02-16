@@ -9,6 +9,8 @@
           //Get costumize detail
           $image_id = get_theme_mod('bg_image');
           $image_url = wp_get_attachment_url($image_id);
+          $profile_image_id = get_theme_mod('bg_profilePic');
+          $profile_image_url = wp_get_attachment_url($profile_image_id);
           $video_id = get_theme_mod('bg_video');
           $video_url = wp_get_attachment_url($video_id);
           $youtube_url = get_theme_mod('youtube_link');
@@ -79,7 +81,7 @@
           <div class='index_background_img'>
             <?php
 
-            if($image_url != null || $image_url = ''){
+            if($image_url != null || $image_url != ''){
               echo "<img src='$image_url' alt='background image'>";
             }else{
               echo "<img src='".get_bloginfo('template_directory')."/asset/img/bg3mini.png' alt='background image'>";
@@ -122,15 +124,25 @@
         <div class='pLine pLine_3'></div>
         <div class='pLine pLine_4'></div>
 
-        <div class='pImg' id='pImg'><img src='<?php bloginfo('template_directory'); ?>/asset/img/pImg.jpg'></div>
-        <!--div class='pTitle pTitle_top'><a>JEFF's PORTFOLIO</a></div>
-        <div class='pTitle pTitle_sec'><a>work by Jeff</a></div-->
+
+
+        <div class='pImg' id='pImg'>
+          <?php
+
+          if($profile_image_url != null || $profile_image_url != ''){
+            echo "<img src='$profile_image_url' alt='profile image'>";
+          }else{
+            echo "<img src='".get_bloginfo('template_directory')."/asset/img/pImg.jpg' alt='profile image'>";
+          }
+          ?>
+
+        </div>
 
         <div class='index_intro'>
 
           <div class='pIntro pIntro_brief'>
             <br>
-            <!--a>Web / UI designer, Animation Effect Designer, Front-End Developer</a-->
+
             <a><?php bloginfo( 'description' );?></a>
           </div>
 

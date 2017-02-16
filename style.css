@@ -179,10 +179,14 @@ footer{
   opacity: 0.8;
 }
 
+.footer_info a{
+  color: #fafafa;
+}
+
 .footer_container i{
   margin-top:10px;
   font-size:30px;
-  padding-left:20px;
+  padding-left:24px;
   opacity: 0.7;
   cursor: pointer;
   color:#ffffff;
