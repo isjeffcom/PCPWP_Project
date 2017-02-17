@@ -18,7 +18,6 @@
 </head>
 
 <body <?php body_class(); ?>>
-
   <nav>
     <div class='nav_container' id='nav'>
 

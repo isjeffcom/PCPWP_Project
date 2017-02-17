@@ -73,6 +73,15 @@ the_post_thumbnail('featuredImageCropped');
 //Theme Custom Settings{
 
 
+function devework_cancel_open_sans() {
+	wp_deregister_style('open-sans');
+  /*
+  //Use 360 CDN
+  wp_register_style( 'open-sans', '//fonts.useso.com/css?family=Open+Sans:300italic,400italic,600italic,300,400,600' );
+	wp_enqueue_style( 'open-sans');*/
+}
+add_action( 'wp_enqueue_scripts', 'devework_cancle_open_sans' );
+add_action('admin_enqueue_scripts', 'devework_cancle_open_sans');
 
 
 function liveface_customize_register( $wp_customize ) {
