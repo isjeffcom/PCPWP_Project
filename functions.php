@@ -17,7 +17,7 @@
 //Load Main CSS
 function liveface_load_styles() {
   // Add Common css.
-  wp_enqueue_style( 'style', get_stylesheet_uri() );
+  wp_enqueue_style( 'style', get_stylesheet_uri(), '1.5.3' );
 
   // Add Index css.
   wp_enqueue_style('liveface-css-index', get_template_directory_uri() . '/asset/css/index.css', false, '1.5.2');
