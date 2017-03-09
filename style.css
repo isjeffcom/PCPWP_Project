@@ -53,6 +53,9 @@ nav{
   color:#ffffff;
 }
 
+body{
+  background-color:#192438;
+}
 
 .nav_container{
   position:fixed;
@@ -154,7 +157,7 @@ nav{
 footer{
   width:100%;
   background-color:#192438;
-  position: absolute;
+  position: relative;
   margin-left:auto;
   margin-right:auto;
 }
