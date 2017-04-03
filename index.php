@@ -17,6 +17,7 @@
           $tencent_url = get_theme_mod('tencent_video_link');
           $bt_first_name = get_theme_mod('bg_bigText_firstName');
           $bt_surname = get_theme_mod('bg_bigText_surName');
+          $popupAlert = get_theme_mod('popup_alert_text');
       ?>
 
       <div class='background_video' id='bgvDiv'>
@@ -178,6 +179,28 @@
 
 
   </div>
+
+  <div class='alertOverlay' id='alertOverlay'>
+
+    <?php
+
+    if(empty($popupAlert)){
+      //do nothing.......
+    }else{
+      echo "<script>
+      var alert = document.getElementById('alertOverlay');
+      alert.style.backgroundColor = '#58c271';
+      alert.style.display = 'block';
+      setTimeout(function(){document.getElementById('alertOverlay').style.display='none';}, 6000);
+      </script>";
+
+    }
+
+    ?>
+
+    <a id='alertContent'><?php echo $popupAlert  ?></a>
+  </div>
+
 </div>
 
 

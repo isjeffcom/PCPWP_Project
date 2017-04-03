@@ -53,9 +53,7 @@ nav{
   color:#ffffff;
 }
 
-body{
-  background-color:#192438;
-}
+
 
 .nav_container{
   position:fixed;
@@ -156,18 +154,19 @@ body{
 
 footer{
   width:100%;
+  height:16%;
   background-color:#192438;
   position: relative;
   margin-left:auto;
   margin-right:auto;
+
 }
 
 .footer_container{
   color:#fafafa;
   text-align: center;
   width:100%;
-  margin-top:30px;
-  margin-bottom:30px;
+  padding-top: 30px;
 }
 
 .footer_title{
@@ -207,6 +206,20 @@ footer{
   transition: all 220ms ease-in-out;
 }
 
+
+@media screen and (min-width: 2561px){
+  footer{
+    height:8%;
+  }
+}
+
+
+
+@media screen and (min-width: 1921px){
+  footer{
+    height:12%;
+  }
+}
 
 @media screen and (max-width: 600px){
 
@@ -253,6 +266,16 @@ footer{
 
   .footer_info{
     font-size: 12px;
+  }
+
+  footer{
+
+    margin-top: -2px;
+    height: 20%;
+  }
+
+  .footer_container{
+    padding-top: 0px;
   }
 
 }

@@ -9,6 +9,12 @@
 <script src='<?php bloginfo('template_directory'); ?>/js/qrcode.min.js'></script>
 
 
+<div class='progressBar'>
+
+  <div class='pBMiddle' id='pBM'></div>
+
+</div>
+
 <div class='all_container' id='allContainer'>
 
 
@@ -97,6 +103,7 @@
 
 
 </div>
+<script src='<?php bloginfo('template_directory'); ?>/js/pbar.js'></script>
 <script src='<?php bloginfo('template_directory'); ?>/js/floatBtn.js'></script>
 <script src='<?php bloginfo('template_directory'); ?>/js/like.js'></script>
 <script src='<?php bloginfo('template_directory'); ?>/js/wechatShare.js'></script>

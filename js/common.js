@@ -1,5 +1,6 @@
 
 footerFix();
+
 function footerFix(){
   if(document.body.scrollHeight < window.screen.availHeight){
 
@@ -7,6 +8,7 @@ function footerFix(){
     footer.style.bottom = '0px';
   }
 }
+
 
 
 

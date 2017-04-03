@@ -366,3 +366,19 @@ iframe{
     width: 90%;
   }
 }
+
+.progressBar{
+  z-index:999;
+  position: fixed;
+  top:0pt;
+  height:0.3%;
+  width:100%;
+  background-color:#fff;
+  overflow: hidden;
+}
+
+.pBMiddle{
+  width:0%;
+  height:100%;
+  background-color:#4ace7c;
+}

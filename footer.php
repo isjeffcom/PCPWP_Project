@@ -11,6 +11,7 @@
     $github = get_theme_mod('op_github');
     $facebook = get_theme_mod('op_facebook');
     $twitter = get_theme_mod('op_twitter');
+    $linkedin = get_theme_mod('op_linkedin');
 
     //Other Portfolio Display, if user leave it blank that will not display
     if($ins != null || $ins = ''){
@@ -30,15 +31,19 @@
     }
 
     if($github != null || $github = ''){
-      echo "<a href='$github' target='_blank'><i class='fa fa-github' aria-hidden='true'></i></i></a>";
+      echo "<a href='$github' target='_blank'><i class='fa fa-github' aria-hidden='true'></i></a>";
     }
 
     if($facebook != null || $facebook = ''){
-      echo "<a href='$facebook' target='_blank'><i class='fa fa-facebook' aria-hidden='true'></i></i></a>";
+      echo "<a href='$facebook' target='_blank'><i class='fa fa-facebook' aria-hidden='true'></i></a>";
     }
 
     if($twitter != null || $twitter = ''){
-      echo "<a href='$twitter' target='_blank'><i class='fa fa-twitter' aria-hidden='true'></i></i></a>";
+      echo "<a href='$twitter' target='_blank'><i class='fa fa-twitter' aria-hidden='true'></i></a>";
+    }
+
+    if($linkedin != null || $linkedin = ''){
+      echo "<a href='$linkedin' target='_blank'><i class='fa fa-linkedin' aria-hidden='ture'></i></a>";
     }
 
      ?>

@@ -3,7 +3,7 @@
  * MyFirstTheme's functions and definitions
  *
  * @package LiveFACE_Portfolio
- * @since LiveFACE_Portfolio 0.1
+ * @since LiveFACE_Portfolio 1.2
  */
 
  /**
@@ -20,13 +20,13 @@ function liveface_load_styles() {
   wp_enqueue_style( 'style', get_stylesheet_uri(), '1.5.3' );
 
   // Add Index css.
-  wp_enqueue_style('liveface-css-index', get_template_directory_uri() . '/asset/css/index.css', false, '1.5.2');
+  wp_enqueue_style('liveface-css-index', get_template_directory_uri() . '/asset/css/index.css', false, '1.6.2');
 
   // Add Animate css
-  wp_enqueue_style('liveface-css-animate', get_template_directory_uri() . '/asset/css/animate.css', false, '1.5.2');
+  wp_enqueue_style('liveface-css-animate', get_template_directory_uri() . '/asset/css/animate.css', false, '1.6.2');
 
   // Add Video css
-  wp_enqueue_style('liveface-css-video', get_template_directory_uri() . '/asset/css/video.css', false, '1.5.2');
+  wp_enqueue_style('liveface-css-video', get_template_directory_uri() . '/asset/css/video.css', false, '1.6.2');
 
   // Add Font-awesome css
   wp_enqueue_style('liveface-css-font-awesome', get_template_directory_uri() . '/asset/css/font-awesome.min.css', false, '1.1');
@@ -38,7 +38,7 @@ add_action( 'wp_enqueue_scripts', 'liveface_load_styles' );
 function liveface_post_load_styles(){
   if(is_singular('post') || is_singular('page')){
     // Add Post css
-    wp_enqueue_style('liveface-css-post', get_template_directory_uri() . '/asset/css/post.css', false, '2.2.3');
+    wp_enqueue_style('liveface-css-post', get_template_directory_uri() . '/asset/css/post.css', false, '2.2.6');
 
     // Add Common css.
     wp_enqueue_style( 'style', get_stylesheet_uri() );
@@ -80,8 +80,8 @@ function devework_cancel_open_sans() {
   wp_register_style( 'open-sans', '//fonts.useso.com/css?family=Open+Sans:300italic,400italic,600italic,300,400,600' );
 	wp_enqueue_style( 'open-sans');*/
 }
-add_action( 'wp_enqueue_scripts', 'devework_cancle_open_sans' );
-add_action('admin_enqueue_scripts', 'devework_cancle_open_sans');
+//add_action( 'wp_enqueue_scripts', 'devework_cancle_open_sans' );
+
 
 
 function liveface_customize_register( $wp_customize ) {
@@ -311,6 +311,38 @@ function liveface_customize_register( $wp_customize ) {
       'section' => 'other_portfolio',
       'priority' => 15,
       'settings' => 'op_twitter'
+    ));
+
+    $wp_customize->add_setting('op_linkedin', array(
+      'type' => 'theme_mod',
+      'default' => '#',
+      'capability' => 'edit_theme_options',
+    ));
+
+    $wp_customize->add_control('op_linkedin', array(
+      'label' => __('LinkedIn', 'LiveFACE'),
+      'section' => 'other_portfolio',
+      'priority' => 15,
+      'settings' => 'op_linkedin'
+    ));
+
+    $wp_customize->add_section('popup_alert', array(
+    'title' => 'Pop up Alert',
+    'description' => 'Set up your alert',
+    'capability' => 'edit_theme_options'
+    ));
+
+    $wp_customize->add_setting('popup_alert_text', array(
+      'type' => 'theme_mod',
+      'default' => '#',
+      'capability' => 'edit_theme_options',
+    ));
+
+    $wp_customize->add_control('popup_alert_text', array(
+      'label' => __('Pop up text', 'LiveFACE'),
+      'section' => 'popup_alert',
+      'priority' => 15,
+      'settings' => 'popup_alert_text'
     ));
 
   }
