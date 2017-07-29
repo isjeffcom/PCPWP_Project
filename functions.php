@@ -38,7 +38,7 @@ add_action( 'wp_enqueue_scripts', 'liveface_load_styles' );
 function liveface_post_load_styles(){
   if(is_singular('post') || is_singular('page')){
     // Add Post css
-    wp_enqueue_style('liveface-css-post', get_template_directory_uri() . '/asset/css/post.css', false, '2.2.6');
+    wp_enqueue_style('liveface-css-post', get_template_directory_uri() . '/asset/css/post.css', false, '2.2.7');
 
     // Add Common css.
     wp_enqueue_style( 'style', get_stylesheet_uri() );
@@ -343,6 +343,25 @@ function liveface_customize_register( $wp_customize ) {
       'section' => 'popup_alert',
       'priority' => 15,
       'settings' => 'popup_alert_text'
+    ));
+
+    $wp_customize->add_section('icp', array(
+    'title' => 'China Internet Content Provider Licenses',
+    'description' => 'Add your ICP number',
+    'capability' => 'edit_theme_options'
+    ));
+
+    $wp_customize->add_setting('icp_settings', array(
+      'type' => 'theme_mod',
+      'default' => '#',
+      'capability' => 'edit_theme_options',
+    ));
+
+    $wp_customize->add_control('icp', array(
+      'label' => __('ICP', 'LiveFACE'),
+      'section' => 'icp',
+      'priority' => 15,
+      'settings' => 'icp_settings'
     ));
 
   }

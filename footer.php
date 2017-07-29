@@ -4,6 +4,7 @@
     <a class='footer_title'>OTHER PORTFOLIO</a><br>
     <?php
 
+    $icp = get_theme_mod('icp_settings');
     $ins = get_theme_mod('op_instagram');
     $pin = get_theme_mod('op_pinterest');
     $behance = get_theme_mod('op_behance');
@@ -55,6 +56,11 @@
       <a href='https://isjeff.com'>JIANFENG WU</a>
       <a> | Powered by </a>
       <a href='<?php echo esc_url( home_url( '/' ) ); ?>wp-admin' target='_blank'>WordPress</a>
+      <?php
+      if($icp != null || $icp = ''){
+        echo "<a> | </a><a href='http://www.miibeian.gov.cn' target='_blank'>$icp</a>";
+      }
+      ?>
     </div>
 
   </div>

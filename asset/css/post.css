@@ -91,6 +91,7 @@ iframe{
 .left_container img{
   width:100%;
   height:auto;
+  margin-bottom:10px;
 }
 
 .left_content_footer{

@@ -159,10 +159,10 @@ Index style sheet
 
 @media screen and (max-width: 1440px){
   .gallary_center_title{
-    width: 960px;
+    width: 650px;
     top: 45%;
-    left: -17%;
-    font-size: 40px;
+    left: 3%;
+    font-size: 32px;
   }
 
   .index_gallery_Contorller{
