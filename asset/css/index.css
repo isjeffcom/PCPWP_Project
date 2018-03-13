@@ -20,13 +20,14 @@ Index style sheet
   color:#fafafa;
   font-size:12px;
 
+
 }
 
-@media screen and (max-width: 1440px){}
 
 .index_gallery{
   position:relative;
   width:100%;
+  margin-top:-100px;
 }
 
 .index_gallery_img_container{
@@ -53,17 +54,12 @@ Index style sheet
   width:100%;
   opacity: 0.6;
   /*timer*/
-  -webkit-transition: all 320ms cubic-bezier(.25,.8,.25,1);
-  -moz-transition: all 320ms ease-in-out;
-  transition: all 320ms ease-in-out;
+  transition: all 420ms ease-in-out;
 }
 
 .index_gallery_img img:hover{
   opacity: 0.1;
-  /*timer*/
-  -webkit-transition: all 420ms cubic-bezier(.25,.8,.25,1);
-  -moz-transition: all 420ms ease-in-out;
-  transition: all 420ms ease-in-out;
+  
 
 }
 
@@ -74,7 +70,7 @@ Index style sheet
 
 
 .gallary_center_title{
-  font-family: "Microsoft YaHei",Helvetica, "Hiragino Sans GB", sans-serif;
+  font-family: barlowbold, "Microsoft YaHei",Helvetica, "Hiragino Sans GB", sans-serif;
   font-weight:800;
   width:700px;
   position:absolute;
@@ -88,14 +84,12 @@ Index style sheet
   /*Animation*/
   animation-duration: 0.5s;
   animation-iteration-count: 1;
+  transition: all 420ms ease-in-out;
 }
 
 .gallary_center_title:hover{
   color: #4ace7c;
-  /*timer*/
-  -webkit-transition: all 420ms cubic-bezier(.25,.8,.25,1);
-  -moz-transition: all 420ms ease-in-out;
-  transition: all 420ms ease-in-out;
+  
 }
 
 .index_gallery_Contorller{
@@ -115,18 +109,13 @@ Index style sheet
   overflow: hidden;
   opacity: 0.5;
   cursor: pointer;
-  /*timer*/
-  -webkit-transition: all 220ms cubic-bezier(.25,.8,.25,1);
-  -moz-transition: all 220ms ease-in-out;
-  transition: all 220ms ease-in-out;
+  transition: all 420ms ease-in-out;
 }
 
 .gC:hover{
   opacity: 1;
-  /*timer*/
-  -webkit-transition: all 420ms cubic-bezier(.25,.8,.25,1);
-  -moz-transition: all 420ms ease-in-out;
-  transition: all 420ms ease-in-out;
+
+  
 }
 
 .gC a{
@@ -158,13 +147,18 @@ Index style sheet
 }
 
 @media screen and (max-width: 1440px){
-  .gallary_center_title{
-    width: 650px;
-    top: 45%;
-    left: 3%;
-    font-size: 32px;
+  .index_gallery{
+    position:relative;
+    width:100%;
+    margin-top:0px;
   }
 
+  .gallary_center_title{
+    width: 685px;
+    top: 45%;
+    left: 2.2%;
+    font-size: 30px;
+  }
   .index_gallery_Contorller{
     height:140px;
   }
@@ -233,11 +227,8 @@ Index style sheet
 
 @media screen and (max-width: 600px){
 
-  .alertOverlay{
-    height:16%;
-    background-color:#58c271;
-    padding-top:10px;
-    opacity: 0.8;
+  .index_gallery{
+    margin-top:0px;
   }
 
   .index_gallery_img{
@@ -245,8 +236,15 @@ Index style sheet
     width:100%;
   }
 
+  .index_gallery_img img{
+    opacity:0.3;
+  }
+
   .gallary_center_title{
-    display:none;
+    width: 320px;
+    top: 36%;
+    left: 12%;
+    font-size: 22px;
   }
 
   .index_gallery_Contorller{

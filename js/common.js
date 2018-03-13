@@ -1,6 +1,10 @@
 
 footerFix();
 
+//iOS WebApp
+window.navigator.standalone == true;
+window.matchMedia('(display-mode: standalone)').matches;
+
 function footerFix(){
   if(document.body.scrollHeight < window.screen.availHeight){
 
@@ -9,7 +13,15 @@ function footerFix(){
   }
 }
 
-
+if(document.body.offsetWidth < 600){
+  var c = document.getElementsByClassName("gallary_center_title");
+  for(i=0;i<c.length;i++){
+    c[i].style.WebkitAnimationName = 'fadeIn2';
+    c[i].style.animationName = 'fadeIn2';
+    c[i].style.opacity = 1;
+    console.log(c[i])
+  }
+}
 
 
 function showText(x){
@@ -63,7 +75,7 @@ window.addEventListener("scroll", function(event) {
 
     if(top <= 200){
       nav.style.animationName = 'navOutRe';
-      nav.style.opacity = '0.2';
+      nav.style.opacity = '0.5';
     }
 
     if(top >= 500){

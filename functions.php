@@ -17,16 +17,16 @@
 //Load Main CSS
 function liveface_load_styles() {
   // Add Common css.
-  wp_enqueue_style( 'style', get_stylesheet_uri(), '1.5.3' );
+  wp_enqueue_style( 'style', get_stylesheet_uri(), '1.5.5' );
 
   // Add Index css.
-  wp_enqueue_style('liveface-css-index', get_template_directory_uri() . '/asset/css/index.css', false, '1.6.2');
+  wp_enqueue_style('liveface-css-index', get_template_directory_uri() . '/asset/css/index.css', false, '1.6.3');
 
   // Add Animate css
-  wp_enqueue_style('liveface-css-animate', get_template_directory_uri() . '/asset/css/animate.css', false, '1.6.2');
+  wp_enqueue_style('liveface-css-animate', get_template_directory_uri() . '/asset/css/animate.css', false, '1.6.3');
 
   // Add Video css
-  wp_enqueue_style('liveface-css-video', get_template_directory_uri() . '/asset/css/video.css', false, '1.6.2');
+  wp_enqueue_style('liveface-css-video', get_template_directory_uri() . '/asset/css/video.css', false, '1.6.3');
 
   // Add Font-awesome css
   wp_enqueue_style('liveface-css-font-awesome', get_template_directory_uri() . '/asset/css/font-awesome.min.css', false, '1.1');

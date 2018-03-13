@@ -3,6 +3,12 @@ Created by JIANFENG WU
 2017.04.03
 Post page progress bar function
 */
+
+//iOS WebApp
+window.navigator.standalone == true;
+window.matchMedia('(display-mode: standalone)').matches;
+
+
 var visualH = document.body.clientHeight;
 var limit = document.body.offsetHeight - window.innerHeight;
     console.log(limit);

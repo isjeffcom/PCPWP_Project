@@ -545,31 +545,26 @@
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   animation-delay: 0.6s;
-
-  box-shadow: 0px 0px 30px 0px rgba(93,112,129,0.75);
-  width:300px;
-  height:300px;
+  
+  width: 40px;
+  height: 40px;
   opacity: 0;
-  z-index:2;
-  margin-left: auto;
-  margin-right: auto;
+  z-index: 2;
 
   transform: perspective(500px) rotateY(0deg);
-  /*timer*/
-  -webkit-transition: all 580ms linear;
-  -moz-transition: all 580ms ease-in-out;
-  transition: all 580ms ease-in-out;
 
+  /*timer*/
+  transition: all 580ms ease-in-out;
 }
 
 .pImg:hover{
-  box-shadow: 0px 0px 90px 0px rgba(93,112,129,0.75);
+  box-shadow: 0px 0px 30px 0px rgba(93,112,129,0.75);
 
 }
 
 .pImg img{
-  width:300px;
-  height:300px;
+  width: 40px;
+  height: 40px;
 }
 
 /*Title Start*/
@@ -595,7 +590,7 @@
 }
 
 .index_intro{
-  margin-top:1%;
+  margin-top:36%;
 }
 
 .pIntro{
@@ -620,6 +615,12 @@
 .pIntro_brief a{
   color:#fff;
   font-size:18px;
+  opacity:0.2;
+  transition: all 240ms ease-in-out;
+}
+
+.pIntro_brief a:hover{
+  opacity:0.8;
 }
 
 
@@ -634,18 +635,17 @@
   }
 
   .pImg{
-      margin-top: 120px;
-      width: 360px;
-      height: 360px;
+      width: 50px;
+      height: 50px;
   }
 
   .pImg img{
-    width: 360px;
-    height: 360px;
+    width: 50px;
+    height: 50px;
   }
 
   .index_intro{
-    margin-top:1.6%;
+    margin-top:34%;
   }
 
   .index_background_bigText{
@@ -666,13 +666,13 @@
   }
 
   .pImg{
-    width:600px;
-    height:600px;
+    width:80px;
+    height:80px;
   }
 
   .pImg img{
-    width:600px;
-    height:600px;
+    width:80px;
+    height:80px;
   }
 
   .index_background_bigText{
@@ -698,7 +698,9 @@
   }
 }
 
-@media screen and (max-width: 1366px){
+
+
+@media screen and (max-width: 1440px){
 
     .index_background{
       height: 757px;
@@ -720,6 +722,10 @@
 
     .index_down_angle{
       bottom: 200px;
+    }
+
+    .index_intro{
+      margin-top:480px;
     }
   }
 
@@ -777,6 +783,7 @@
 
   .pIntro_brief a{
     font-size:16px;
+    opacity:0px;
   }
 
   .pLine{

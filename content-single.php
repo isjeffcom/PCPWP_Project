@@ -5,6 +5,16 @@
  */
 ?>
 
+<head>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Jeff's Portfolio">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="apple-touch-icon" href="https://www.isjeff.com/wp-content/uploads/2017/02/cropped-c2-180x180.jpg" sizes="620x620">
+  <link rel="apple-touch-icon" href="https://www.isjeff.com/wp-content/uploads/2017/02/cropped-c2-180x180.jpg" sizes="144x144">
+  <link rel="apple-touch-icon" href="https://www.isjeff.com/wp-content/uploads/2017/02/cropped-c2-180x180.jpg" sizes="192x192">
+
+</head>
+
 <script src='<?php bloginfo('template_directory'); ?>/js/jq311.js'></script>
 <script src='<?php bloginfo('template_directory'); ?>/js/qrcode.min.js'></script>
 

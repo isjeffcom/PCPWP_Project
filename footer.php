@@ -68,7 +68,7 @@
 
 
 
-<script src='<?php bloginfo('template_directory'); ?>/js/common.js'></script>
+<script src='<?php bloginfo('template_directory'); ?>/js/common.js?v=1.2'></script>
 <script src='<?php bloginfo('template_directory'); ?>/js/navMobile.js'></script>
 
 </body>

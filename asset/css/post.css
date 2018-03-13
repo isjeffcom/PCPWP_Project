@@ -1,3 +1,19 @@
+h1{
+  font-family:barlowbold;
+}
+
+h2{
+  font-family:barlowbold;
+}
+
+h3{
+  font-family:barlowbold;
+}
+
+strong{
+  font-family:barlowbold;
+}
+
 #nav{
   display:none;
 }
@@ -21,17 +37,15 @@ button{
   margin-bottom: 10px;
   cursor: pointer;
   background-color:#ffffff;
-  border: 2px solid #3ca764;
+  border: 2px solid #4ace7c;
+  /*Timer*/
+  transition: all 240ms ease-in-out;
 }
 
 button:hover{
   color:#ffffff;
   background-color:#4ace7c;
 
-  /*timer*/
-  -webkit-transition: all 120ms cubic-bezier(.25,.8,.25,1);
-  -moz-transition: all 120ms ease-in-out;
-  transition: all 120ms ease-in-out;
 }
 
 iframe{
@@ -108,14 +122,12 @@ iframe{
 .left_like_btn i{
   font-size: 3em;
   color:#192438;
+  /*timer*/
+  transition: all 420ms ease-in-out;
 }
 
 .left_like_btn i:hover{
   color:#ff4657;
-  /*timer*/
-  -webkit-transition: all 420ms cubic-bezier(.25,.8,.25,1);
-  -moz-transition: all 420ms ease-in-out;
-  transition: all 420ms ease-in-out;
 }
 
 .left_author_title{
@@ -201,17 +213,11 @@ iframe{
   cursor: pointer;
   color:#192438;
   /*timer*/
-  -webkit-transition: all 120ms cubic-bezier(.25,.8,.25,1);
-  -moz-transition: all 120ms ease-in-out;
   transition: all 120ms ease-in-out;
 }
 
 .right_share i:hover{
   opacity: 0.9;
-  /*timer*/
-  -webkit-transition: all 120ms cubic-bezier(.25,.8,.25,1);
-  -moz-transition: all 120ms ease-in-out;
-  transition: all 120ms ease-in-out;
 }
 
 .float_btn_container{

@@ -38,30 +38,7 @@
         </div>
         <video id='bgv' width="100%" height="100%">
           <source src='<?php echo $video_url; ?>' type='video/mp4'>
-          <?php
-          /*
-          //Load video by IP address for China mainland user
-          $ip = $_SERVER['REMOTE_ADDR'];
-          $videoSrc = bloginfo('template_directory').'/asset/video/bgv.mp4';
-          //$ip = '117.21.234.96';
-            function getCity($ip){
-              $url="http://ip.taobao.com/service/getIpInfo.php?ip=".$ip;
-              $ip=json_decode(file_get_contents($url));
-              if((string)$ip->code=='1'){
-                 return false;
-               }
-              $data = (array)$ip->data;
-              return $data;
 
-            }
-            print_r(getCity($ip)[country_id]);
-            if(getCity($ip)[country_id] == "CN"){
-              $videoSrc = 'http://ol63elmd8.bkt.clouddn.com/bgv.mp4';
-            }else{
-              $videoSrc = "bloginfo('template_directory')/asset/video/bgv.mp4";
-            }
-            */
-            ?>
         </video>
       </div>
 
@@ -72,7 +49,7 @@
         <div class='square square_4'></div>
         <div class='square square_5'></div>
 
-        <!--div class='wTitle'><a>Loading...</a></div-->
+
       </div>
 
       <!--All element need display add in index screen 2-->
@@ -105,20 +82,6 @@
             <i class="fa fa-angle-down" aria-hidden="true" onclick='scrollDown()'></i>
           </div>
 
-        <!--div class='background_ani'>
-          <div class='circle circle_1'></div>
-          <div class='circle circle_2'></div>
-          <div class='circle circle_3'></div>
-          <div class='circle circle_4'></div>
-          <div class='circle circle_5'></div>
-          <div class='circle circle_6'></div>
-          <div class='circle circle_7'></div>
-          <div class='circle circle_8'></div>
-          <div class='circle circle_9'></div>
-          <div class='circle circle_10'></div>
-          <div class='circle circle_11'></div>
-          <div class='circle circle_12'></div>
-        </div-->
 
         <div class='pLine pLine_1'></div>
         <div class='pLine pLine_2'></div>
@@ -127,17 +90,7 @@
 
 
 
-        <div class='pImg' id='pImg'>
-          <?php
-
-          if($profile_image_url != null || $profile_image_url != ''){
-            echo "<img src='$profile_image_url' alt='profile image'>";
-          }else{
-            echo "<img src='".get_bloginfo('template_directory')."/asset/img/pImg.jpg' alt='profile image'>";
-          }
-          ?>
-
-        </div>
+        
 
         <div class='index_intro'>
 
@@ -204,7 +157,7 @@
 </div>
 
 
-<script src='<?php bloginfo('template_directory'); ?>/js/prespective.js'></script>
+<!--script src='<?php bloginfo('template_directory'); ?>/js/prespective.js'></script-->
 <script src='<?php bloginfo('template_directory'); ?>/js/playvideo.js'></script>
 
 <?php get_footer(); ?>
